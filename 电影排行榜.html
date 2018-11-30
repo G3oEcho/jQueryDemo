@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影排行榜</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 1px solid black;
+            height: 500px;
+            width: 300px;
+            margin: 100px auto;
+        }
+        ul>span{
+            font-size: 25px;
+            color: pink;
+            padding: 10px auto;
+            align-items: center;
+        }
+        ul>li{
+            list-style: none;
+            padding: 5px 10px;
+            border: 1px dashed grey;
+
+        }
+        ul>li>span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: deeppink;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+        ul>li:nth-child(n+5) span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: grey;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+        .content{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: none;
+        }
+        .current .content{
+            display: block;
+        }
+        .content>img{
+            width: 90px;
+            height: auto;
+            float: left;
+            margin: 7px 3px;
+        }
+        .content>p{
+            height: 120px;
+            width: 180px;
+            float: right;
+            font-size: 12px;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("li").hover(function () {
+                $(this).addClass("current");
+            },function () {
+                $(this).removeClass("current");
+            })
+            // $("li").mouseover(function () {
+            //     $("li").addClass("current")
+            // })
+            // $("li").mouseleave(function () {
+            //     $("li").removeClass("current")
+            // })
+            })
+
+    </script>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <span>iTunes榜单</span>
+            <li><span>1</span>Skr WU
+                <div class="content">
+                    <img src="img/skr.jpg">
+                    <p>简介：吴亦凡（Kris），1990年11月6日出生于广东省广州市，华语影视男演员、流行乐歌手。2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。</p>
+                </div>
+            </li>
+            <li><span>2</span>Skr WU
+                <div class="content">
+                    <img src="img/skr.jpg">
+                    <p>简介：吴亦凡（Kris），1990年11月6日出生于广东省广州市，华语影视男演员、流行乐歌手。2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。</p>
+                </div></li>
+            <li><span>3</span>Skr WU
+                <div class="content">
+                    <img src="img/skr.jpg">
+                    <p>简介：吴亦凡（Kris），1990年11月6日出生于广东省广州市，华语影视男演员、流行乐歌手。2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。</p>
+                </div></li>
+            <li><span>4</span>Skr WU
+                <div class="content">
+                    <img src="img/skr.jpg">
+                    <p>简介：吴亦凡（Kris），1990年11月6日出生于广东省广州市，华语影视男演员、流行乐歌手。2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。</p>
+                </div></li>
+            <li><span>5</span>Skr WU
+                <div class="content">
+                    <img src="img/skr.jpg">
+                    <p>简介：吴亦凡（Kris），1990年11月6日出生于广东省广州市，华语影视男演员、流行乐歌手。2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。</p>
+                </div></li>
+            <li><span>6</span>Skr WU
+                <div class="content">
+                    <img src="img/skr.jpg">
+                    <p>简介：吴亦凡（Kris），1990年11月6日出生于广东省广州市，华语影视男演员、流行乐歌手。2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。</p>
+                </div></li>
+        </ul>
+
+    </div>
+</body>
+</html>

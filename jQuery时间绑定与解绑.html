@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间绑定与解绑</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#button1").click(function () {
+                alert("Hello World!");//编码效率高 但是部分事件jQuery没有实现
+            })
+            $("#button2").click(function () {
+                alert("NMSL");
+            })
+            $("#button1").onmouseenter(function () {
+                alert("NMSL");
+            })
+        })
+
+        // 注意点：
+        // 注册多个事件不会覆盖 不同类型事件可以共存
+    </script>
+</head>
+<body>
+    <button id="button1">点我</button>
+    <button id="button2">点我</button>
+
+</body>
+</html>

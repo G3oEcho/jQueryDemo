@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示和隐藏动画</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("button").eq(0).click(function () {
+                // $("div").css("display", "block");
+                $("div").show(1000);
+            })
+            $("button").eq(1).click(function () {
+                // $("div").css("display", "none");
+                $("div").hide(1000);
+            })
+            $("button").eq(2).click(function () {
+                // $("div").css("display", "block");
+                $("div").toggle(1000);
+            })
+        })
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        .change{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<span>
+        <button id="1">显示</button>
+        <button id="2">隐藏</button>
+        <button id="3">切换</button>
+        <div id="content"></div>
+</span>
+</body>
+</html>

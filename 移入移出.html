@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移入移出</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            // mouseover/mouseout移入子元素同样会触发父元素时间
+            // return false
+            // $(".father").mouseover(function () {
+            //     console.log("移入father");
+            // })
+            // $(".father").mouseout(function () {
+            //     console.log("移出father");
+            // })
+            // $(".son").mouseover(function () {
+            //     console.log("移入son");
+            //     return false;
+            // })
+            // $(".son").mouseout(function () {
+            //     console.log("移出son");
+            //     return false;
+            // mouseenter/leave不会触发
+            //     $(".father").mouseenter(function () {
+            //         console.log("移入father");
+            //     })
+            // $(".father").mouseleave(function () {
+            //     console.log("移出father");
+            // })
+            $(".father").hover(function () {
+                console.log("移入father");
+            },function () {
+                console.log("移出father");
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

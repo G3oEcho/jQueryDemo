@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尺寸及位置操作</title>
+    <style>
+        *{
+
+        }
+        .father{
+            background: red;
+            width: 100px;
+            height: 100px;
+            border: 50px solid black;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var btns = document.getElementsByTagName("button")
+            // 1、获取元素的高度、宽度等
+            btns[0].onclick = function () {
+                console.log($(".father").outerHeight());
+            // 2、修改元素的尺寸
+            btns[1].onclick = function () {
+                $(".father").width("500px");
+            }//不先获取无法修改
+            }
+            // 3、修改位置
+            btns[2].onclick = function () {
+                $(".father").offset({//offset设置对于窗口的偏移位
+                    left: "200",//不加单位，双引号必须
+                });
+            }
+            //position只能获取不能设置
+        })
+    </script>
+</head>
+<body>
+    <div class="father"></div>
+    <br>
+    <button>获取</button>
+    <button>修改尺寸</button>
+    <button>修改位置</button>
+</body>
+</html>

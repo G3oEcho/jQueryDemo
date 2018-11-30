@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件冒泡与默认行为与自动触发</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".son").click(function () {
+                alert("Hello World");
+                return false;
+                //或者
+                // event.stopPropagation()
+            });
+            $(".father").click(function () {
+                alert("Hello Fahter");
+            })
+            $("a").click(function () {
+                alert("弹出");
+                // return false;
+            })
+            //用trigger触发事件会引起事件冒泡和默认行为
+            // $(".son").trigger("click");
+            //用triggerHandler不会
+            // $(".son").triggerHandler("click");
+            $(".son").on("myClick", function(){
+              alert("FUCKU");
+            })
+            $(".son").trigger("myClick");
+        })
+
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <a href="http://www.baidu.com">我是百度</a>
+    <form action="http://www.taobao.com">
+        <input type="text">
+        <input type="submit">
+    </form>
+</body>
+</html>

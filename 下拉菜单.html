@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".nav>li").mouseenter(function () {
+                $new = $(this).children(".new")
+                $new.stop()
+                $new.slideDown(500);
+                // var $new1 = $(this).siblings().children(".new")
+                //     $new1.slideUp(300);
+            })
+            $(".nav>li").mouseleave(function () {
+                $new.stop()
+                $new.slideUp(300);
+            })
+        })
+    </script>
+    <style>
+        *{
+            margin: 10px auto;
+            padding: auto;
+        }
+        .nav{
+            width:500px;
+            height: 50px;
+            margin: 20px auto;
+            list-style: none;
+        }
+        .nav > li{
+            float:left;
+            border: 1px solid black;
+            width:75px;
+            height: 25px;
+            text-align: center;
+        }
+        .new{
+            background-color: pink;
+            /*border: 1px solid black;*/
+            list-style: none;
+            margin: 5px 0;
+            padding: 0;
+            display: none;
+        }
+        .new>li{
+            border: 1px solid black;
+            margin: 0;
+        }
+        .new>li:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="nav">
+            <li>1st<span></span>
+                <ul class="new">
+                    <li>1st</li>
+                    <li>2nd</li>
+                    <li>3rd</li>
+                    <li>4th</li>
+                </ul>
+            </li>
+            <li>2nd<span></span>
+                <ul class="new">
+                    <li>1st</li>
+                    <li>2nd</li>
+                    <li>3rd</li>
+                    <li>4th</li></ul>
+                    </li>
+            <li>3rd<span></span>
+                <ul class="new">
+                    <li>1st</li>
+                    <li>2nd</li>
+                    <li>3rd</li>
+                    <li>4th</li></ul>
+                    </li>
+            <li>4th<span></span>
+                <ul class="new">
+                    <li>1st</li>
+                    <li>2nd</li>
+                    <li>3rd</li>
+                    <li>4th</li></ul>
+                    </li>
+        </ul>
+    </div>
+</body>
+</html>

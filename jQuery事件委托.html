@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $("ul").append("<li>我是新增的</li>")
+            })
+            $("ul").delegate("li", "click", function () {
+                console.log($(this).html());
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ul>
+    <button>新增一个li</button>
+</body>
+</html>
