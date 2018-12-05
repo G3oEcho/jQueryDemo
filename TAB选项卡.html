@@ -49,12 +49,12 @@
             //     $img.removeClass("show");
             // })
             $("li").mouseenter(function () {
-                    $(this).addClass("current");
-                    $(this).siblings().removeClass("current")
-                    var index = $(this).index();
-                    var $img = $(".content>li").eq(index)
-                    $img.siblings().removeClass("show");
-                    $img.addClass("show");
+                $(this).addClass("current");
+                $(this).siblings().removeClass("current")
+                var index = $(this).index();
+                var $img = $(".content>li").eq(index)
+                $img.siblings().removeClass("show");
+                $img.addClass("show");
                 //只需要局部变量 代码量较少
             })
 
@@ -64,11 +64,11 @@
 <body>
     <div class="box">
         <ul class="nav">
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-        </ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
         <ul class="content">
             <li class="show"><img src="img/1.jpg"></li>
             <li><img src="img/2.jpg"></li>

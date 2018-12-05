@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗广告</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            display: none;
+        }
+
+        div>span{
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: red;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("span").click(function () {
+                $("#ad") .remove();
+            })
+            //方法一
+            // $("#ad").slideDown(5000,function () {
+            //     $("#ad").fadeOut(1000,function () {
+            //         $("#ad").fadeIn(1000);
+            //     });
+            // });
+            //方法二
+            $("#ad").slideDown(5000).fadeOut(1000).fadeIn(1000);
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="ad">
+        <span></span>
+        <img src="img/1.jpg">
+
+    </div>
+</body>
+</html>

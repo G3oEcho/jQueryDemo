@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        .one{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            margin: 20px 0;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("button").eq(0).click(function () {
+                a = myform1.input.value;
+                $(".one").animate({
+
+                    width:a,
+                },2000,function () {
+                    console.log("动画执行完毕");
+                })
+            })
+            $("button").eq(1).click(function () {
+                $(".one").delay(2000).animate({
+                    width:"+=200"
+                },2000,function () {
+                    console.log("动画执行完毕");
+                })
+            })
+            $("button").eq(2).click(function () {
+                $(".one").animate({
+                    width:"hide"
+                },2000,function () {
+                    console.log("动画执行完毕");
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>设置宽度为</button>
+    <form name="myform1"><input type="text" id="input"></form>
+    <button>叠加属性</button>
+    <button>关键字</button>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+</html>
